@@ -5,3 +5,4 @@ export const ElementBanner = props => (
   {props.userName} have {props.elementsItems.filter(i => !i.done).length} products left
   </h4>
 );
+ 

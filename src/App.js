@@ -3,6 +3,7 @@ import { ElementsRow } from "./components/ElementRows";
 import { ElementBanner } from "./components/ElementBanner";
 import { ElementCreator } from "./components/ElementCreator";
 import { VisibilityControl } from "./components/VisibilityControl";
+import "./App.css"
 
 function App() {
   const [userName, setUserName] = useState('I');
