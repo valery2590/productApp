@@ -5,7 +5,7 @@ import { ElementCreator } from "./components/ElementCreator";
 import { VisibilityControl } from "./components/VisibilityControl";
 
 function App() {
-  const [userName, setUserName] = useState('Valery');
+  const [userName, setUserName] = useState('I');
   const [elementsItems, setElementsItems] = useState([
     { name: "product one", done: false , date: ''},
     { name: "producto two", done: false , date: ''},
