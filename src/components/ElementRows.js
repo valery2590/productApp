@@ -11,9 +11,8 @@ export const ElementsRow = (props) => (
         checked={props.items.done}
         key={props.items.done}
         onChange={() => props.toggleItems(props.items)}
-       
       />
     </td>
-    <td></td>
+    <td key={props.items.date}>{props.items.date}</td>
   </tr>
 );

@@ -7,10 +7,8 @@ import { VisibilityControl } from "./components/VisibilityControl";
 function App() {
   const [userName, setUserName] = useState('I');
   const [elementsItems, setElementsItems] = useState([
-    { name: "product one", done: false , date: ''},
-    { name: "producto two", done: false , date: ''},
-    { name: "product three", done: false, date: ''},
-    { name: "product four", done: false, date: ''},
+    { name: "", done: false , date: ''},
+
   ]);
 
   const [showCompleted, setShowCompleted] = useState(true)
@@ -22,10 +20,10 @@ function App() {
     }else{
       setUserName('Valery')
       setElementsItems([
-        { name: "product one example", done: false, date: new Date() },
-        { name: "producto two example", done: false , date: ''},
-        { name: "product three example", done: false, date: ''},
-        { name: "product four example", done: false, date: ''}
+        { name: "product one", done: false, date: new Date().toLocaleDateString() },
+        { name: "producto two", done: false , date: new Date().toLocaleDateString()},
+        { name: "product three", done: false, date: '16/03/2021'},
+        { name: "product four", done: false, date: '08/02/2022'}
       ])
       setShowCompleted(true);
     }
@@ -37,9 +35,8 @@ function App() {
 
   const createNewElement = newElement =>{
     if (!elementsItems.find(i => i.name === newElement)){
-      setElementsItems([...elementsItems, {name : newElement , done : false}])
+      setElementsItems([...elementsItems, {name : newElement , done : false, date: new Date().toLocaleDateString()}])
     }
-
   }
 
   const toggleItems = items =>
